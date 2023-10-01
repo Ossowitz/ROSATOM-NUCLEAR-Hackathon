@@ -1,7 +1,7 @@
-io\codejournal\maven\xsd2java\IQEpguRosatomArchSpguType.class
-io\codejournal\maven\xsd2java\IQEpguRosatomArchSpguUl.class
-io\codejournal\maven\xsd2java\ObjectFactory.class
-io\codejournal\maven\xsd2java\AppliedDocumentType.class
-io\codejournal\maven\xsd2java\OREpguRosatomArchSpguType.class
-io\codejournal\maven\xsd2java\IQEpguRosatomArchSpguFl.class
+ru\rosatom\IQEpguRosatomArchSpguFl.class
+ru\rosatom\IQEpguRosatomArchSpguUl.class
+ru\rosatom\ObjectFactory.class
+ru\rosatom\OREpguRosatomArchSpguType.class
+ru\rosatom\AppliedDocumentType.class
 ru\rosatom\Main.class
+ru\rosatom\IQEpguRosatomArchSpguType.class

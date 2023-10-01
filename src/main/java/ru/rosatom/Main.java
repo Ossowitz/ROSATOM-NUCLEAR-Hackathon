@@ -1,9 +1,5 @@
 package ru.rosatom;
 
-import io.codejournal.maven.xsd2java.IQEpguRosatomArchSpguFl;
-import io.codejournal.maven.xsd2java.IQEpguRosatomArchSpguUl;
-import io.codejournal.maven.xsd2java.ObjectFactory;
-
 public class Main {
 
     private final static String TEST = "TEST_DATA";

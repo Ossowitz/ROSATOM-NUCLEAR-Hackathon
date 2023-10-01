@@ -42,7 +42,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <packageName>io.codejournal.maven.xsd2java</packageName>
+                    <packageName>ru.rosatom</packageName>
                 </configuration>
             </plugin>
         </plugins>
