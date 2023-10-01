@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+    <xsd:element name="IQEpguRosatomArchSpguType">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="OrderId" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Номер заявления на ЕПГУ</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="StatementDate" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Дата заявления на ЕПГУ</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Department" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Код ведомства</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ServiceCode" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Код гос. услуги, в рамках оказания которой осуществляется информационный
+                            обмен
+                        </xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="20"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="TargetCode" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Код цели</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="SelectCode" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Выбор способа получения ответа на запрос</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element ref="IQEpguRosatomArchSpguFl" minOccurs="0"/>
+                <xsd:element ref="IQEpguRosatomArchSpguUl" minOccurs="0"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="OREpguRosatomArchSpguType">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="StatusComment" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Комментарий к статусу ответа</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ResultState" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Терминальный статус заявления</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="2"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="AppliedDocumentType">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Url" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Относительный путь к файлу внутри архива</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Name" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Имя файла документа</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Type" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>MIME-тип контента</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="Number" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Номер документа</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="CodeDocument" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Код документа</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="IQEpguRosatomArchSpguFl">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:annotation>
+                    <xsd:documentation>Данные о физ.лице</xsd:documentation>
+                    <xsd:appinfo>Обязательное, если заявление подаёт ФЛ</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:element name="flSurname" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Фамилия</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flName" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Имя</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flPatronymic" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Отчество</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flBirthdate" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Дата рождения</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flSeriya" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Серия паспорта</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flNomer" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Номер паспорта</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flDateVidachi" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Дата выдачи паспорта</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flKemVidan" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Кем выдан паспорт</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flFactAddress" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Полный фактический адрес</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flPhone" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Телефон</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="flEmail" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Адрес электронной почты</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="myOption" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Вид получаемой справки</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="IQEpguRosatomArchSpguUl">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:annotation>
+                    <xsd:documentation>Данные о юр.лице</xsd:documentation>
+                    <xsd:appinfo>Обязательное, если заявление подаёт ЮЛ</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:element name="ulName" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Полное наименование организации</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="4000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="OGRN" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>ОГРН</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="INN" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>ИНН</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="KPP" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>КПП</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulHeadSurname" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Фамилия руководителя</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulHeadName" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Имя руководителя</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulHeadPatronymic" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Отчество руководителя</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulFactAddress" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Полный фактический адрес об</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulPhone" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Телефон</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ulEmail" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Адрес электронной почты</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="100"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="myOption" minOccurs="1">
+                    <xsd:annotation>
+                        <xsd:documentation>Вид получаемой справки</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:maxLength value="1000"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
