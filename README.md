@@ -1,3 +1,5 @@
+![img_1.png](attach/img_1.png)
+
 # Реализация XSD-схемы
 
 ## Развёртывание проекта:
@@ -28,12 +30,12 @@ CMD ["echo", "Maven build completed successfully"]
 
 ### [Созданная XSD-схема:](https://github.com/Ossowitz/ParseTaskRosatom/blob/master/src/main/xsd/main.xsd)
 
-![img.png](img.png)
+![img.png](attach/img.png)
 
 ### [Сгенерированные на основе XSD-схемы Java-классы:](https://github.com/Ossowitz/ParseTaskRosatom/tree/master/target/generated-sources/jaxb/ru/rosatom)
 
-![img_1.png](img1.png)
+![img_1.png](attach/img1.png)
 
 ### [Эталонные запросы и ответы](https://github.com/Ossowitz/ParseTaskRosatom/blob/master/src/main/java/ru/rosatom/Main.java)
 
-![img_2.png](img_2.png)
+![img_2.png](attach/img_2.png)
